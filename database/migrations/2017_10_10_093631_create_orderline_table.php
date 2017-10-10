@@ -19,6 +19,10 @@ class CreateOrderlineTable extends Migration
             $table->integer('product_id');
             $table->integer('price');
             $table->timestamps();
+
+            $table->foreign('order_id')->references('id')->on('t_order');
+            $table->foreign('product_id')->references('id')->on('m_product');
+
         });
     }
 

@@ -21,6 +21,9 @@ class CreateOrderTable extends Migration
             $table->integer('user_id');
             $table->integer('user_address_id');
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('m_user');
+            $table->foreign('user_address_id')->references('id')->on('m_user_address');
         });
     }
 

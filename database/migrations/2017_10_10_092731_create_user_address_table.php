@@ -21,6 +21,8 @@ class CreateUserAddressTable extends Migration
             $table->string('city');
             $table->string('street');
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('m_user');
         });
     }
 
