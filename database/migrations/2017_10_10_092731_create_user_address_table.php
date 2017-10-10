@@ -17,9 +17,9 @@ class CreateUserAddressTable extends Migration
             $table->increments('id');
             $table->integer('user_id');
             $table->string('postcode');
-            $table->string('prefectures');
-            $table->string('municipality');
-            $table->string('address');
+            $table->string('pref');
+            $table->string('city');
+            $table->string('street');
             $table->timestamps();
         });
     }
