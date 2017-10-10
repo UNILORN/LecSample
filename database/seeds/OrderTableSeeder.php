@@ -30,6 +30,7 @@ class OrderTableSeeder extends Seeder
                 ];
                 foreach (range(1,5) as $value){
                     $order_line[] = [
+                        'id'=>((((($val-1)*5)+$inner)-1)*5)+$value,
                         'order_id'=>(($val-1)*5)+$inner,
                         'product_id'=>mt_rand(1,150),
                         'price'=>mt_rand(1000,40000)

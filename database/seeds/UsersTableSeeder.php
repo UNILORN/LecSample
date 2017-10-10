@@ -33,6 +33,7 @@ class UsersTableSeeder extends Seeder
         foreach (range(1,150) as $user_val){
             foreach (range(1,4) as $val){
                 $user_address[] = [
+                    'id'=>(($user_val-1)*4)+$val,
                     'user_id'=>$user_val,
                     'postcode'=>$faker->postcode,
                     'prefectures'=>$faker->company,
